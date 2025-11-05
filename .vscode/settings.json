@@ -4,5 +4,7 @@
     "cmake.installPrefix": "D:/Users/skheradiya/Documents/Repo_SK/OPE-Design/Install",
     "cmake.configureArgs": [
         "-DOCC_INSTALL_DIR=D:/Users/skheradiya/Documents/Repo_SK/OPE3rdParty/Install/OCCT",
+        "-DCMAKE_BUILD_TYPE=Debug",
+        "-DCMAKE_VERBOSE_MAKEFILE=ON"
     ]
 }
