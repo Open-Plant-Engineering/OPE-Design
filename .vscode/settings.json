@@ -3,6 +3,6 @@
     "cmake.buildDirectory": "D:/Users/skheradiya/Documents/Repo_SK/OPE-Design/Build",
     "cmake.installPrefix": "D:/Users/skheradiya/Documents/Repo_SK/OPE-Design/Install",
     "cmake.configureArgs": [
-        "-DOCC3RDPARTY_DIR=D:/Users/skheradiya/Documents/Repo_SK/OpenCascade/3rdParty",
+        "-DOCC_INSTALL_DIR=D:/Users/skheradiya/Documents/Repo_SK/OPE3rdParty/Install/OCCT",
     ]
 }
