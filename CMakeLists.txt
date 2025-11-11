@@ -12,70 +12,12 @@ add_executable(OPE_Design
     src/main.cpp
 )
 
-target_link_libraries(OPE_Design PRIVATE
-  TKBin
-  TKBinL
-  TKBinTObj
-  TKBinXCAF
-  TKBO
-  TKBool
-  TKBRep
-  TKCAF
-  TKCDF
-  TKDCAF
-  TKDE
-  TKDECascade
-  TKDEIGES
-  TKDEOBJ
-  TKDEPLY
-  TKDESTEP
-  TKDESTL
-  TKDEVRML
-  TKDraw
-  TKernel
-  TKExpress
-  TKFeat
-  TKFillet
-  TKG2d
-  TKG3d
-  TKGeomAlgo
-  TKGeomBase
-  TKHelix
-  TKHLR
-  TKLCAF
-  TKMath
-  TKMesh
-  TKMeshVS
-  TKOffset
-  TKOpenGl
-  TKOpenGlTest
-  TKPrim
-  TKQADraw
-  TKRWMesh
-  TKService
-  TKShHealing
-  TKStd
-  TKStdL
-  TKTObj
-  TKTObjDRAW
-  TKTopAlgo
-  TKTopTest
-  TKV3d
-  TKVCAF
-  TKViewerTest
-  TKXCAF
-  TKXDEDRAW
-  TKXMesh
-  TKXml
-  TKXmlL
-  TKXmlTObj
-  TKXmlXCAF
-  TKXSBase
-  TKXSDRAW
-  TKXSDRAWDE
-  TKXSDRAWIGES
-  TKXSDRAWOBJ
-  TKXSDRAWPLY
-  TKXSDRAWSTEP
-  TKXSDRAWSTL
-  TKXSDRAWVRML )
+# Add linker options
+foreach (LIB ${OpenCASCADE_LIBRARIES})
+  target_link_libraries(OPE_Design debug ${OpenCASCADE_LIBRARY_DIR}/lib${LIB}.dll.a)
+  target_link_libraries(OPE_Design optimized ${OpenCASCADE_LIBRARY_DIR}/lib${LIB}.dll.a)
+  message(OPE_Design debug ${OpenCASCADE_LIBRARY_DIR}d/${LIB}.lib)
+endforeach()
+
+# Adjust runtime environment
+set_property(TARGET OPE_Design PROPERTY VS_DEBUGGER_ENVIRONMENT "PATH=$<$<CONFIG:DEBUG>:${OpenCASCADE_BINARY_DIR}>$<$<NOT:$<CONFIG:DEBUG>>:${OpenCASCADE_BINARY_DIR}>;%PATH%")
