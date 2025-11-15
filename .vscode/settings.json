@@ -1,9 +1,10 @@
 {
-    "cmake.sourceDirectory": "D:/Users/skheradiya/Documents/Repo_SK/OPE-Design",
-    "cmake.buildDirectory": "D:/Users/skheradiya/Documents/Repo_SK/OPE-Design/Build",
-    "cmake.installPrefix": "D:/Users/skheradiya/Documents/Repo_SK/OPE-Design/Install",
+    "cmake.sourceDirectory": "E:/SKGitRepo/OPE/OPE-Design",
+    "cmake.buildDirectory": "E:/SKGitRepo/OPE//OPE-Design/Build",
+    "cmake.installPrefix": "E:/SKGitRepo/OPE//OPE-Design/Install",
     "cmake.configureArgs": [
-        "-DOpenCASCADE_DIR=D:/Users/skheradiya/Documents/Repo_SK/OPE3rdParty/Install/OCCT/cmake",
-        "-DCMAKE_BUILD_TYPE=Debug"
+        "-DOpenCASCADE_DIR=E:/SKGitRepo/OPE/OPE3rdParty/Install/OCCT/cmake",
+        "-DCMAKE_BUILD_TYPE=Debug",
+        "-DFREETYPE_DIR=E:/SKGitRepo/OpenCascade/3rdParty/freetype-2.5.5-vc14-64"
     ]
 }
